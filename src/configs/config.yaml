@@ -1,0 +1,31 @@
+# DB connection params
+DB_CONNECTION:
+  # Database connection details for local environment
+  localhost:
+    user: postgres
+    password: postgres
+    host: localhost
+    port: 5432
+    database: disaster
+
+COMMON:
+  # URL for GeoJSON data from GDACS
+  geojson_url: https://www.gdacs.org/Alerts/default.aspx
+  # URL for XML data from GDACS
+  xml_url: https://www.gdacs.org/xml/rss_24h.xml
+
+  # Possible options of webdrivers: Google Chrome, Mozilla Firefox, Microsoft Edge, Internet Explorer, Safari
+  webdriver: Google Chrome
+
+  # Path to the directory where downloads will be saved
+  browser_download_directory_path: C:\\Users\\Volodymyr\\Downloads
+
+  # Name of the table for storing disaster alerts in the database
+  disaster_alerts_table_name: disaster_alerts
+
+  # Name of the table for storing disaster events in the database
+  disaster_events_table_name: disaster_events
+
+  # Coordinate system identifier obtained from metadata
+  src: epsg:4326
+
