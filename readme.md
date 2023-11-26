@@ -9,7 +9,6 @@ The `geodatacrawler` project is a data crawling application designed to collect 
 ### Prerequisites
 
 - Python 3.7 or higher
-- Web driver (e.g., ChromeDriver for Google Chrome)
 
 ### Installation
 
@@ -51,6 +50,5 @@ This script fetches and pushes data into the specified PostGIS database. It is d
 - Database Interaction: GeoJSON data is converted to GeoPandas DataFrame and pushed to a PostGIS database using SQLAlchemy.
 
 ### Notes
-- Ensure that the web driver executable is in the system PATH.
 - The script runs continuously, fetching new data every 24 hours. Adjust the interval in main.py if needed.
 - Secure sensitive information such as database credentials.
