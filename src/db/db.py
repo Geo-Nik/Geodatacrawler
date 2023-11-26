@@ -7,6 +7,7 @@ feature collection data to a PostGIS database table.
 """
 
 from typing import Dict, Any, Optional
+import logging
 from abc import ABC, abstractmethod
 import geopandas as gpd
 from sqlalchemy import create_engine, exc
@@ -92,6 +93,6 @@ class GeoJsonDBDataWriter(DBDataWriter):
 
             # Close the database connection
             self.engine.dispose()
-            print("GeoJSON data has been successfully written to the PostGIS table.")
+            logging.info("GeoJSON data has been successfully written to the PostGIS table.")
         except exc.SQLAlchemyError as e:
-            print(f"Error writing GeoJSON data to the database: {e}")
+            logging.error(f"Error writing GeoJSON data to the database: {e}")

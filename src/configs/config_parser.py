@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 from typing import Dict, Any
 import os.path
 import yaml
+import logging
 
 
 class ConfigParser(ABC):
@@ -52,10 +53,10 @@ class YamlConfigParser(ConfigParser):
                 config_data: Dict[str, Any] = yaml.safe_load(config_file)
                 return config_data
         except FileNotFoundError:
-            print(f"Error: Config file not found at {self.config_path}")
+            logging.error(f"Error: Config file not found at {self.config_path}")
             return {}
         except yaml.YAMLError as e:
-            print(f"Error parsing YAML in config file: {e}")
+            logging.error(f"Error parsing YAML in config file: {e}")
             return {}
 
 
