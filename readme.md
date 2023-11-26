@@ -16,6 +16,7 @@ The `geodatacrawler` project is a data crawling application designed to collect 
 Install required packages:
 ```bash
 pip install -r requirements.txt
+```
 
 
 ### Configuration
@@ -31,6 +32,7 @@ Run the main.py script:
 
 ```bash
 python main.py
+```
 
 This script fetches and pushes data into the specified PostGIS database. It is designed to run continuously, fetching new data every 24 hours.
 
